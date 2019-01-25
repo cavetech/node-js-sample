@@ -1,3 +1,6 @@
+const Sentry = require('@sentry/node');
+Sentry.init({ dsn: 'https://1fdc8aa4f7744e53935b2590ff798049@sentry.io/1380007' });
+
 var express = require('express')
 var app = express()
 
@@ -6,6 +9,7 @@ app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
   response.send('Hello World!')
+  Sentry.captureMessage(request);
 })
 
 app.listen(app.get('port'), function() {
