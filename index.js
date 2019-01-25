@@ -1,5 +1,5 @@
 const Sentry = require('@sentry/node');
-Sentry.init({ dsn: 'https://1fdc8aa4f7744e53935b2590ff798049@sentry.io/1380007' });
+Sentry.init({ dsn: 'https://485af430310941b68a340198c51b52c6@sentry.io/1380006' });
 
 var express = require('express')
 var app = express()
